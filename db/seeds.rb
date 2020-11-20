@@ -45,4 +45,18 @@ Dose.create!(description: "1.33 oz", cocktail: sex_on_the_beach, ingredient: o_j
 Dose.create!(description: "8 cl", cocktail: martini, ingredient: gin)
 Dose.create!(description: "4 cl", cocktail: martini, ingredient: Ingredient.find_by(name: "Dry Vermouth"))
 Dose.create!(description: "1", cocktail: martini, ingredient: olives)
+
+puts "Adding photos!"
+
+mojito_file = URI.open('https://www.thespruceeats.com/thmb/MqGv7imLKyo0hh5be9SKDdLxtH8=/668x668/smart/filters:no_upscale()/mojito-5a8f339fba61770036ec61d8.jpg')
+mojito.photo.attach(io: mojito_file, filename: 'mojito.jpg', content_type: 'image/png')
+
+bloody_file = URI.open('https://i0.wp.com/www.crowdedkitchen.com/wp-content/uploads/2020/08/bloody-mary-bar.jpg')
+bloody_mary.photo.attach(io: bloody_file, filename: 'bloody_mary.jpg', content_type: 'image/png')
+
+sex_file = URI.open('https://noseychef.com/wp-content/uploads/2018/07/IMG_3744.jpg')
+sex_on_the_beach.photo.attach(io: sex_file, filename: 'sex_on_the_beach.jpg', content_type: 'image/png')
+
+martini_file = URI.open('https://www.simplejoy.com/wp-content/uploads/2018/04/dirty_martini.jpg')
+martini.photo.attach(io: martini_file, filename: 'martini.jpg', content_type: 'image/png')
 puts 'Done!'
