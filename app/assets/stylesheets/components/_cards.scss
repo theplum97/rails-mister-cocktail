@@ -52,8 +52,43 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  a {
+    color: white!important;
+    font-family: Lobster;
+  }
 }
 
-.container.background {
-  padding: 100px!important;
+.cocktail-title {
+  font-family: Lobster;
+  color: white;
 }
+
+.ingredients {
+  font-family: Indie Flower;
+  font-size: 25px;
+  color: white;
+  i {
+    color: grey;
+    opacity: 0.5;
+  }
+  i:hover {
+    opacity: 1;
+  }
+}
+
+#add-ingredient {
+  color: white;
+  font-family: Indie Flower;
+  font-size: 25px;
+  opacity: 0.5;
+  text-decoration: none;
+  a {
+    color: white;
+  }
+}
+
+#add-ingredient:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
